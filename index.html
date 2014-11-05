@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		.container {
+			font-family: verdana;
+			font-size: 10px;
+		}
+		.frame{
+			border: #000 1px solid;
+			position: absolute;
+			display: none;
+		}
+		.box {
+			width: 100%;
+			border: #000 1px solid;
+			position: absolute;
+			-webkit-border-radius: 5px;
+			border-radius: 5px;
+		}
+			.box h5 {
+				text-transform: uppercase;
+				text-align: center;
+				margin: 0;
+				border-bottom: #000 1px solid;	
+				font-size: 11px;
+				font-family: Arial;
+			}
+		div.line {
+			/*height: 25px;*/
+			line-height: 18px;
+			margin: 2px;
+			position: relative
+		}
+		p.line {
+			margin: 4px;
+			line-height: 13px;
+		}
+			.line img {
+				height: 20px;
+			}
+			p.line img {
+				height: 13px;
+			}
+				.line img.left {
+					float: left;
+					margin-right: 5px;
+				}
+				.line img.right {
+					float: right;
+					margin-left: 5px;
+				}
+			.line span {
+				display: inline-block;
+			}
+			
+		.valign {
+			position: relative;
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			transform: translateY(-50%);
+		}
+		#setup {width: 265px; top:0px; left:0;}
+		#workflow {width: 265px; top:155px; left:0;}
+		#concepts {width: 265px; top:356px; left:0;}
+		#credits {width: 265px; top:632px; left:0;}
+		#title {width: 430px; height: 85px; top:0; left:270px;}
+		#action_icons {width: 430px; top:90px; left:270px;}
+		#actions {width: 430px; top:369px; left:270px;}
+		#endofDecade {width: 700px; top:1030px; left:0px;}
+		#cities {width: 700px; top: 1560px; left:0;}
+		
+		.em {
+			text-decoration: underline;
+			font-style: italic;
+		}
+		table{
+			width: 100%;
+		}
+			table td:not(:first-child) {
+				border-left: #ccc 1px solid;
+			}
+		img.infra {
+			height: 17px;
+			-webkit-border-radius: 3px;
+			border-radius: 3px;
+		}
+		.warning {
+			background-color: #f90;
+			color: #fff;
+		}
+		#endofDecade div.line:nth-child(odd) {
+			background-color: #ddd;
+		}
+		.title {
+			padding-right: 10px !important;
+			margin-right: 10px !important;
+			border-right: #999 1px solid;
+			height: 32px !important;
+		}
+		.red { color: #f00;}
+		.bold {font-weight: bold;font-size: 1.2em;}
+		.coat {
+			position:relative;
+			height: 15px !important;
+			top: -10px;
+			left: 5px;
+		}
+		#endofDecade div.line { height: 32px;}
+		#endofDecade div.line.short img{ height: 25px;}
+		#endofDecade div.line.wide { height: auto;}
+		#endofDecade div.line.short p.line, #endofDecade div.line.short{ line-height: 32px;}
+	</style>
+</head>
+
+<body>
+	<div id="page1" class="container">
+		<div id="setup" class="box">
+			<h5>2. Setup</h5>
+			<div class="line"><img class="left" src="img/ThreeUnrest.png" /> <span>in every province</span></div>
+			<div class="line"><img class="left" src="img/socialistCounter.png" /> <span>x 2 in the socialist box</span></div>
+			<div class="line"><img class="left" src="img/factoryYellow.png" /> <span>in <b>Hamburg</b> and <b>Dortmund</b></span></div>
+			<div class="line"><img class="left" src="img/factoryRed.png" /> <span>in <b>Berlin</b> and <b>Bitterfeld</b></span></div>
+			<div class="line"><span>Deal 2 1st decade cards to each player </span></div>
+			<div class="line"><span class="valign">Set Berlin Wall to</span> <img src="img/decade1bis.png" /></div>
+		</div>
+	
+		<div id="workflow" class="box">
+			<h5>3. General Workflow</h5>
+			<p class="line">4 decades, of 2 half decades and an end of decade phase each.</p>
+			<p class="line"><span class="em">1st half</span>: (from 2nd decade: each player may discard any number of cards and refill to 2 cards) Set up card display (7 normal cards + 1 special – set special for 4th decade depending on the Wall). Actions start with prestige leader.</p>
+			<p class="line"><span class="em">2nd half</span>: starts as soon as the last normal card from the card display is executed. Refill card display (not special). Game goes on. </p>
+			<p class="line"><span class="em">End of Decade</span>: starts as soon as the last normal card from the card display is executed.</p>
+		</div>
+		
+		<div id="actions" class="box">
+			<h5>6. Actions</h5>
+			<p class="line">Use 1 card (from hand or from the card display). Special card: only East and only trigger event. Each card is then discarded. </p>
+			<p class="line"><span class="em">Remove unrest</span> <img src="img/removeYellowUnrest.png" /> / <img src="img/removeRedUnrest.png" />: Free with yellow (red) card for West (East). Costs 1 dismantle for other cards (If not possible, unrest removal forbidden). </p>
+			<p class="line"><span class="em">Build up economy</span>: value of the card, not possible in province with mass protest. Factory costs 1. Infrastructure costs 1 and needs to have at least 1 factory at one end. An Infrastructure belongs to cities on both sides. Factory value: 1 + nb working connections. Rundown factory value: 0 + nb working connections. </p>
+			<p class="line"><span class="em">Increase Living Standard (LS)</span>: up to 3 <img src="img/lsCounter.png" />, in different provinces. Max #possible <img src="img/lsCounter.png" /> in province = province economy / 3. Card value can boost to reach threshold, but not more than 2 per province. For each new <img src="img/lsCounter.png" /> : <img src="img/removeUnrest.png" /></p>
+			<p class="line"><span class="em">Trigger card event</span>: only own color or dual (see drawing color). Yellow (red and pink) icons affect West (East). Execute all the effect(s) if possible (choose order). Triggering player decides, except for icons with <img src="img/brd-coat.png" /> (West decides) and <img src="img/ddr-coat.png" /> (East decides). <br/><i>Non executable arrows</i>: <img src="img/removeUnrest.png" /> or for prestige line, you may place a new <img src="img/unrestCounter.png" /> in opponent province. <br/><i>Non executable icon</i>: ignore, except if you need to dismantle more than you have (not opponent, in this case just ignore). If <img src="img/redPolice.png" /> or <img src="img/pinkPolice.png" /> executed: the card is not discarded but put in front of the East player. <br/><i>Dual card</i> : you can ignore 1 arrow, or 1 icon for non-arrow icons.</p>
+		</div>
+		
+		<div id="action_icons" class="box">
+			<h5>6. Action icons</h5>
+			<div class="line"><span class="em">With arrows</span><img class="right" src="img/redArrow.png" /><img class="right" src="img/yellowArrow.png" /></div>
+			<div class="line"><img class="left" src="img/prestige.png" /> <img class="left" src="img/westernCurrency.png" /> <img class="left" src="img/socialisme.png" /> <span>: Move on the corresponding track</span></div>
+			
+			<div class="line"><span class="em">Without arrows</span></div>
+			<table>
+				<tr>
+					<td><div class="line"><img class="left" src="img/buildYellow.png" /><img class="left" src="img/buildRed.png" /> <span> : 1 build point</span></div></td>
+					<td><div class="line"><img class="left" src="img/dismantleYellow.png" /><img class="left" src="img/dismantleRed.png" /> <span> : 1 dismantle</span></div></td>
+					<td><div class="line"><img class="left" src="img/removeMassProtest.png" /> <span> : can <img src="img/removeUnrest.png" /> down to 3</span></div></td>
+				</tr>
+				<tr>
+					<td><div class="line"><img class="left" src="img/unrestYellow.png" /><img class="left" src="img/unrestRed.png" /> <span> : add</span> <img src="img/unrestCounter.png" /></div></td>
+					<td><div class="line"><img class="left" src="img/removeYellowUnrest.png" /><img class="left" src="img/removeRedUnrest.png" /> : <img src="img/removeUnrest.png" /> </div></td>
+					<td><div class="line"><img class="left" src="img/moveUnrest.png" /> <span> : Move internally</span></div></td>
+				</tr>
+				<tr>
+					<td><div class="line"><img class="left" src="img/putLS2Yellow.png" /> <span> : add </span> <img src="img/lsCounter.png" /></div></td>
+					<td><div class="line"><img class="left" src="img/putLSYellow.png" /><img class="left" src="img/putLSRed.png" /> <span> : add </span> <img src="img/lsCounter.png" /> <span> , </span> <img src="img/removeUnrest.png" /></div></td>
+					<td><div class="line"><img class="left" src="img/removeLsRed.png" /> <span> : remove </span> <img src="img/lsCounter.png" /></div></td>
+				</tr>
+				<tr>
+					<td><div class="line"><img class="left" src="img/BerlinWall.png" /> <span> : flip to </span> <img src="img/decade1.png" /></div></td>
+					<td><div class="line"><img class="left" src="img/wallFall.png" /> <span> : flip to </span> <img src="img/decade1bis.png" /></div></td>
+					<td><div class="line"><img class="left" src="img/unRundown.png" /> <span> : repair rundown</span></div></td>
+				</tr>
+				<tr>
+					<td><div class="line"><img class="left" src="img/rundown.png" /> <span> : rundown</span></div></td>
+					<td colspan="2"><div class="line"><img src="img/stopRed.png" /> <span> : remove a full </span> <img src="img/factoryRed.png"/> <span> and all connected </span> <img class="infra" src="img/infrastructureRed.png"/></div></td>
+				</tr>
+				<tr>
+					<td><div class="line"><img class="left" src="img/guillaumeAffair.png" /> <img class="left" src="img/stasiDisbandment.png" /> <span> : see rules p6</span></div></td>
+					<td colspan="2"><div class="line"><img src="img/pinkPolice.png" /><img src="img/redPolice.png" /> <span> :  if executed, put in front of East  </span></div></td>
+				</tr>
+			</table>
+		</div>
+		
+		<div id="concepts" class="box">
+			<h5>Concepts</h5>
+			<p class="line"><span class="em">5.1 Building</span>: for each building point, build a new factory or a new infrastructure connected to at least one factory.</p>
+			<p class="line"><span class="em">5.2 Dismantling</span>: for each dismantling remove a factory or infrastructure. A factory with built infrastructure starting from it cannot be removed.</p>
+			<p class="line"><span class="em">4. Mass protest</span>: per 4 <img src="img/unrestCounter.png" /> ==> 1 <img src="img/massProtest.png" />. If <img src="img/massProtest.png" /> in East : must move <img src="img/socialistCounter.png" /> as much as possible to cancel <img src="img/massProtest.png" /> (<img src="img/addSocialist.png" />).</p>
+			<p class="line"><span class="em">8. Police power</span>: <img src="img/redPolice.png" /> and <img src="img/pinkPolice.png" /> can be used once per decade to <img src="img/removeUnrest.png" />, during action or at the end of decade.</p>
+			<p class="line"><span class="em">6.3 Province economy</span>: sum of factories values in the province.</p>
+			<p class="line"><span class="em">9.3 Export factory of a province</span>: factory with the highest value.</p>
+		</div>
+
+		<div id="endofDecade" class="box">
+			<h5>9. End of decade</h5>
+			<p class="line warning"><span class="em">East auto-loss</span>: required to <img src="img/dismantleRed.png" /> more than it can.</p>
+			<div class="line short"><img class="left title" src="img/decade1.png" /> <img src="img/prestige.png" /> <img src="img/yellowArrow.png" /> , <img class="coat" src="img/ddr-coat.png" /><img src="img/dismantleRed.png" /> </div>
+			<div class="line wide"><img class="left title" src="img/decade1bis.png" />  <p class="line">count <img src="img/flight.png" /> on executed cards display + 1 per <img src="img/lsCounter.png" /> in West province with most <img src="img/lsCounter.png" /> + 1 per <img src="img/redPolice.png" /> in front of East + 1 if at least 1 <img src="img/massProtest.png" /> - 1 per <img src="img/lsCounter.png" /> in East province with fewest <img src="img/lsCounter.png" /> - 1 if at least 1 <img src="img/massProtestYellow.png" /> ==> Gives the number of spaces (from 0) you move the <img src="img/flight.png" /> marker ==> Gives the number of <img src="img/dismantleRed.png" /> East must face <span class="red bold">*</span>. Then discard executed cards.</p></div>
+			<div class="line short"><img class="left title" src="img/decade2.png" /> player with advantage executes prestige icon (or below) </div>
+			<div class="line wide"><img class="left title" src="img/decade3.png" /> <p class="line">WC ($) track indicates East <b>income</b> of $. # East export factories whose value is >= to the worst West export factory = <b>exports</b>. WC = <b>income</b> + <b>exports</b>. For each <img src="img/lsCounter.png" />, East need 1 WC. For each point short : <img src="img/rundown.png" /><span class="red bold">*</span>, and if not enough factories remove <img class="infra" src="img/infrastructureRed.png" /><span class="red bold">*</span>.</p></div>
+			<div class="line short"><img class="left title" src="img/decade4.png" />  1 <img class="coat" src="img/ddr-coat.png" /><img src="img/dismantleRed.png" /> per <img src="img/redPolice.png" /> and <img src="img/pinkPolice.png" /> in front of her/him.</div>
+			<div class="line"><img class="left title" src="img/decade5.png" />  <p class="line">for each province (East and West), remove any <img src="img/lsCounter.png" /> exceeding value of export factory. <i>West Berlin</i>: take worst supplier export factory </p> </div>
+			<div class="line"><img class="left title" src="img/decade6.png" />  <p class="line">compare each of your province with your province with the most <img src="img/lsCounter.png" />. Give #<img src="img/unrestCounter.png" /> equals to the difference -1 (Exception: <i>West Berlin</i> : to the full difference, not -1)</p> </div>
+			<div class="line wide"><img class="left title" src="img/decade7.png" /><p class="line">Each province with <img src="img/lsCounter.png" /> can attack 1 opponent adjacent province (Exception: <i>West Berlin</i> attack both neighbors). Give #<img src="img/unrestCounter.png" /> equals to the full difference in <img src="img/lsCounter.png" />. Each <img src="img/massProtest.png" /> or <img src="img/massProtestYellow.png" /> in attacking province prevents 1 <img src="img/lsCounter.png" /> from counting. Give possible new <img src="img/massProtest.png" /> or <img src="img/massProtestYellow.png" /> at the end of the phase only</p></div>
+			<div class="line short"><img class="left title" src="img/decade8.png" />  <p class="line">East executes available unused <img src="img/redPolice.png" /> and <img src="img/pinkPolice.png" /> card(s), and then discards any <img src="img/unrestCounter.png" /> on these cards</p> </div>
+			<div class="line wide"><img class="left title" src="img/decade9.png" />  <p class="line">East receives/loses <img src="img/socialistCounter.png" /> on the holding box depending on the socialist track. Must be used to cancel <img src="img/massProtest.png" /> if need be. In case of negative amount on socialist track, West removes <img src="img/socialistCounter.png" /> from provinces and places  <img src="img/unrestCounter.png" /> instead. </p> <p class="line warning"><span class="em">East auto-loss</span>: must discard <img src="img/socialistCounter.png" />, but no left. <span class="em">East auto-win</span>: must add <img src="img/socialistCounter.png" /> into the holding box, but no left </p></div>
+			<div class="line"><img class="left title" src="img/decade10.png" />  <p class="line">check victory. If 4+ <img src="img/massProtest.png" />(<img src="img/massProtestYellow.png" />) for East (West) ==> instant loss. If both, East wins. After 4 decades, East wins if no one loses. </p> </div>
+			<p class="line red"><span class="bold">*</span> Player with most prestige chooses first, then alternate.</p>
+		</div>
+
+		<div id="credits" class="box">
+			<h5>Wir sind das Volk !</h5>
+			<p class="line">Designed by : <b>Richard Sivél</b> and <b>Peer Sylvester</b></p>
+			<p class="line">Published by : <a href="http://ww.histogame.de">Histogame</a> (www.histogame.de)</p>
+			<p class="line">Reference sheet by <i>christophe.denoize@free.fr</i>.</p>
+		</div>
+
+		<div id="cities" class="box">
+			<h5>10. Specific cities/places</h5>
+			<p class="line"><span class="em">Hamburg</span>: Can be either part of <b>Niedersachsen</b> or <b>Schleswig-Holstein</b>. Choose at the <i>beginning</i> of an action / end of decade phase.</p>
+			<p class="line"><span class="em">Rheinsberg</span>: Can only be bought in play through card. Cannot be connected. You can use a <img src="img/rundown.png" /> instead of a <img src="img/dismantleRed.png" />. You can remove <img src="img/rheinsberg.png"> for a 2nd <img src="img/dismantleRed.png" />.</p>
+			<p class="line"><span class="em">External factories</span>: Build and remove only with event cards. A <img src="img/foreignFactory.png" /> add its value to 1 connected province. Choose at the <i>beginning</i> of an action / end of decade phase.</p>
+			<p class="line"><span class="em">East-Berlin</span>: A province by itself (with only 1 city). Put <img src="img/lsCounter.png" /> and <img src="img/unrestCounter.png" /> in the small map (top right), and the <img src="img/factoryRed.png" /> in the main map</p>
+			<p class="line"><span class="em">West-Berlin</span>: No <img src="img/buildYellow.png">. <img src="img/lsCounter.png"> can be received from connected supplier with an <i>increase living standard</i> action, if the supplier has more <img src="img/lsCounter.png"> than West-Berlin, or through the <i>Start of the Computer Age</i> event card. <img src="img/massProtestYellow.png"> count twice.</p>
+
+		</div>
+		
+		<div class="frame" style="width:700px;top:0;left:0;height:700px;margin-bottom:200px;"></div>
+		<div class="frame" style="width:700px;top:1030px;left:0;height:700px"></div>
+		
+		<div id="title" class="box" style="border: none">
+			<img src="img/title.jpg" style="border-radius: 5px"/>
+		</div>
+	</div>
+</body>
+</html>
